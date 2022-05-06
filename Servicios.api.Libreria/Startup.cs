@@ -4,7 +4,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Servicios.api.Libreria.Core;
-using Servicios.api.Libreria.Core.ContextMongoDB;
 using Servicios.api.Libreria.Repository;
 
 namespace Servicios.api.Libreria
@@ -32,10 +31,21 @@ namespace Servicios.api.Libreria
 
       //DEPENDENCY INJECTION
       //AddTransient genera intancias por cada metodo individual que se va ejecutando, al momento de que el client consuma la API
-      services.AddTransient<IAutorContext, AutorContext>();
-      services.AddTransient<IAutorRepository, AutorRepository>();
+      //services.AddTransient<IAutorContext, AutorContext>();
+      //services.AddTransient<IAutorRepository, AutorRepository>();
+
+      //AddScoped siempre que un cliente haga un request al controller se inicia y se destruye en el response
+      services.AddScoped(typeof(IMongoRepository<>), typeof(MongoRepository<>));
 
       services.AddControllers();
+
+      services.AddCors(option =>
+      {
+        option.AddPolicy("CorsRule", rule =>
+        {
+          rule.AllowAnyHeader().AllowAnyMethod().WithOrigins("*");
+        });
+      });
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,6 +57,8 @@ namespace Servicios.api.Libreria
       }
 
       app.UseRouting();
+
+      app.UseCors("CorsRule");
 
       app.UseAuthorization();
 
