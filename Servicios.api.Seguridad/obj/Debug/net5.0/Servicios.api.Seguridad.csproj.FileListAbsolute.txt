@@ -26,7 +26,6 @@ C:\Users\victo\Documents\Programacion\Udemy\netcore\MicroserviciosconASPNET5\Mic
 C:\Users\victo\Documents\Programacion\Udemy\netcore\MicroserviciosconASPNET5\Microservices\Servicios.api.Seguridad\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\victo\Documents\Programacion\Udemy\netcore\MicroserviciosconASPNET5\Microservices\Servicios.api.Seguridad\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\victo\Documents\Programacion\Udemy\netcore\MicroserviciosconASPNET5\Microservices\Servicios.api.Seguridad\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\victo\Documents\Programacion\Udemy\netcore\MicroserviciosconASPNET5\Microservices\Servicios.api.Seguridad\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\victo\Documents\Programacion\Udemy\netcore\MicroserviciosconASPNET5\Microservices\Servicios.api.Seguridad\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
 C:\Users\victo\Documents\Programacion\Udemy\netcore\MicroserviciosconASPNET5\Microservices\Servicios.api.Seguridad\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\victo\Documents\Programacion\Udemy\netcore\MicroserviciosconASPNET5\Microservices\Servicios.api.Seguridad\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
@@ -71,4 +70,4 @@ C:\Users\victo\Documents\Programacion\Udemy\netcore\MicroserviciosconASPNET5\Mic
 C:\Users\victo\Documents\Programacion\Udemy\netcore\MicroserviciosconASPNET5\Microservices\Servicios.api.Seguridad\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
 C:\Users\victo\Documents\Programacion\Udemy\netcore\MicroserviciosconASPNET5\Microservices\Servicios.api.Seguridad\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\victo\Documents\Programacion\Udemy\netcore\MicroserviciosconASPNET5\Microservices\Servicios.api.Seguridad\obj\Debug\net5.0\Servicios.api.Seguridad.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\victo\Documents\Programacion\Udemy\netcore\MicroserviciosconASPNET5\Microservices\Servicios.api.Seguridad\obj\Debug\net5.0\Servicios.api.Seguridad.csproj.AssemblyReference.cache
+C:\Users\victo\Documents\Programacion\Udemy\netcore\MicroserviciosconASPNET5\Microservices\Servicios.api.Seguridad\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

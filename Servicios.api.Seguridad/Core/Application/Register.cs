@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Servicios.api.Seguridad.Core.Dto;
 using Servicios.api.Seguridad.Core.Entities;
+using Servicios.api.Seguridad.Core.JwtLogic;
 using Servicios.api.Seguridad.Core.Persistence;
 using System;
 using System.Linq;
@@ -45,12 +46,19 @@ namespace Servicios.api.Seguridad.Core.Application
       private readonly SeguridadContexto _context;
       private readonly UserManager<Usuario> _userManager;
       private readonly IMapper _mapper; // se registra en starup
+      private readonly IJwtGenarator _jwtGenarator;
 
-      public UsuarioRegisterHandler(SeguridadContexto context, UserManager<Usuario> userManager, IMapper mapper)
+      public UsuarioRegisterHandler(
+          SeguridadContexto context,
+          UserManager<Usuario> userManager,
+          IMapper mapper,
+          IJwtGenarator jwtGenarator
+        )
       {
         _context = context;
         _userManager = userManager;
         _mapper = mapper;
+        _jwtGenarator = jwtGenarator;
       }
 
       public async Task<UsuarioDto> Handle(UsuarioRegisterCommand request, CancellationToken cancellationToken)
@@ -73,12 +81,17 @@ namespace Servicios.api.Seguridad.Core.Application
           UserName = request.UserName
         };
 
+        // para guardar uso los metodos del identity core
         var resultado = await _userManager.CreateAsync(usuario, request.Password);
 
         if (resultado.Succeeded)
-          return _mapper.Map<Usuario, UsuarioDto>(usuario);
+        {
+          var usuarioDTO = _mapper.Map<Usuario, UsuarioDto>(usuario);
+          usuarioDTO.Token = _jwtGenarator.CreateToken(usuario);
+          return usuarioDTO;
+        }
 
-        throw new Exception("No s epudo registrar el usuario");
+        throw new Exception("No se pudo registrar el usuario");
 
       }
     }

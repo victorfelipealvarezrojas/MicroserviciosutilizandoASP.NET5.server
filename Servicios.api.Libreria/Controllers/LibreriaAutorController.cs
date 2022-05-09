@@ -17,7 +17,7 @@ namespace Servicios.api.Libreria.Controllers
       this._autorGenericRepository = autorGenericRepository;
     }
 
-    [HttpGet]
+    [HttpGet("autorGenerico")]
     public async Task<ActionResult<IEnumerable<AutorEntity>>> Get()
     {
       return Ok(await _autorGenericRepository.GetAll());

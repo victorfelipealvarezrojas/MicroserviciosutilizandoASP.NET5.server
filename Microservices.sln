@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servicios.api.Libreria", "Servicios.api.Libreria\Servicios.api.Libreria.csproj", "{B1396762-DE74-4EAE-A7A8-E99C36B87944}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servicios.api.Seguridad", "Servicios.api.Seguridad\Servicios.api.Seguridad.csproj", "{BA3BEEBE-3A66-4CB9-9010-3B164CC91D45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servicios.api.Seguridad", "Servicios.api.Seguridad\Servicios.api.Seguridad.csproj", "{BA3BEEBE-3A66-4CB9-9010-3B164CC91D45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servicicos.api.Gateway", "Servicicos.api.Gateway\Servicicos.api.Gateway.csproj", "{A7B46BA6-4CFE-4AA5-9CA5-5E41C452073E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BA3BEEBE-3A66-4CB9-9010-3B164CC91D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA3BEEBE-3A66-4CB9-9010-3B164CC91D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA3BEEBE-3A66-4CB9-9010-3B164CC91D45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7B46BA6-4CFE-4AA5-9CA5-5E41C452073E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7B46BA6-4CFE-4AA5-9CA5-5E41C452073E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7B46BA6-4CFE-4AA5-9CA5-5E41C452073E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7B46BA6-4CFE-4AA5-9CA5-5E41C452073E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
